@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'vcr'
+gem 'rest-client'
+gem 'json'
+gem 'webmock'
+gem 'minitest-reporters'
