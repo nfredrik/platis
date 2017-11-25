@@ -1,14 +1,6 @@
 
 require 'rest-client'
 require 'json'
-require 'vcr'
-require 'webmock'
-
-VCR.configure do |config|
-  config.cassette_library_dir = "fixtures/example"
-  config.hook_into :webmock
-end
-
 
 class MyClient 
 

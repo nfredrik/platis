@@ -2,9 +2,16 @@
 require './my_client'
 require 'minitest/autorun'
 require "minitest/reporters"
-#Minitest::Reporters.use!
+require 'vcr'
+require 'webmock'
+
 Minitest::Reporters.use! [Minitest::Reporters::HtmlReporter.new , Minitest::Reporters::RubyMineReporter.new]
 
+
+VCR.configure do |config|
+  config.cassette_library_dir = "fixtures/example"
+  config.hook_into :webmock
+end
 
 
   class Test_MyClient  < Minitest::Test
